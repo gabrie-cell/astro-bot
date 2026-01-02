@@ -1,6 +1,7 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
 import './config.js'
-import { setupMaster, fork } from 'cluster'
+import cluster from 'cluster'
+const { setupMaster, fork } = cluster 
 import { watchFile, unwatchFile } from 'fs'
 import cfonts from 'cfonts'
 import {createRequire} from 'module'
@@ -37,19 +38,19 @@ const {CONNECTING} = ws
 const {chain} = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
-//const yuw = dirname(fileURLToPath(import.meta.url))
-//let require = createRequire(megu)
+console.log(boxen(chalk.bold.greenBright(`✨ AUTO-UPDATE ✨\n\nEl sistema se ha actualizado automáticamente.\n\n🤖 Bot: MitaBot-MD\n📊 Estado: Online / Reiniciado\n🚀 Todo listo para continuar.`), {padding: 1, margin: 1, borderStyle: 'double', borderColor: 'magenta'}));
+
 let { say } = cfonts
 
 console.log(chalk.bold.redBright(`\n𖤛 Iniciando Mita  𖤛\n`))
 
-say('MitaBot-MD', {
+say('CULO-BOT', {
 font: 'block',
 align: 'center',
 colors: ['magentaBright']
 })
 
-say(`Made With By Mancos Y Asociados`, {
+say(`Made With By the-xyzz`, {
 font: 'console',
 align: 'center',
 colors: ['blueBright']
